@@ -1,0 +1,235 @@
+.threat-gauge {
+    width: 100%;
+    min-width: 0;
+
+    padding: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(12, 27, 21, 0.98),
+            rgba(7, 17, 13, 0.98)
+        );
+
+    border: 1px solid #1d3c2d;
+    border-radius: 10px;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.025),
+        0 10px 35px rgba(0, 0, 0, 0.25);
+
+    color: #f4f7f5;
+}
+
+.threat-gauge-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 15px;
+
+    margin-bottom: 18px;
+}
+
+.threat-gauge-label {
+    display: block;
+
+    color: #55ff91;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 5px;
+}
+
+.threat-gauge h3 {
+    margin: 0;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    color: #f1f5f2;
+}
+
+.threat-gauge-status {
+    padding: 5px 9px;
+
+    border-radius: 5px;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.gauge-wrapper {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 12px 0 15px;
+}
+
+.gauge-ring {
+    --score: 0deg;
+
+    width: 155px;
+    height: 155px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        conic-gradient(
+            currentColor var(--score),
+            #172c22 var(--score)
+        );
+
+    position: relative;
+
+    box-shadow:
+        0 0 30px rgba(85, 255, 145, 0.08);
+}
+
+.gauge-ring::before {
+    content: "";
+
+    position: absolute;
+
+    width: 124px;
+    height: 124px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            #102119,
+            #07110d
+        );
+
+    border: 1px solid #244636;
+}
+
+.gauge-inner {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.gauge-inner strong {
+    font-size: 38px;
+
+    line-height: 1;
+
+    font-weight: 800;
+}
+
+.gauge-inner span {
+    margin-top: 5px;
+
+    font-size: 10px;
+
+    color: #718c7c;
+}
+
+.gauge-scale {
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #658072;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.threat-gauge.low .gauge-ring {
+    color: #39ff88;
+}
+
+.threat-gauge.medium .gauge-ring {
+    color: #55b9ff;
+}
+
+.threat-gauge.high .gauge-ring {
+    color: #ffd54a;
+}
+
+.threat-gauge.critical .gauge-ring {
+    color: #ff4545;
+
+    animation: criticalPulse 1.5s infinite;
+}
+
+.threat-gauge.unknown .gauge-ring {
+    color: #718c7c;
+}
+
+.threat-gauge.low .threat-gauge-status {
+    color: #39ff88;
+}
+
+.threat-gauge.medium .threat-gauge-status {
+    color: #55b9ff;
+}
+
+.threat-gauge.high .threat-gauge-status {
+    color: #ffd54a;
+}
+
+.threat-gauge.critical .threat-gauge-status {
+    color: #ff4545;
+}
+
+@keyframes criticalPulse {
+    0% {
+        box-shadow:
+            0 0 15px rgba(255, 69, 69, 0.1);
+    }
+
+    50% {
+        box-shadow:
+            0 0 35px rgba(255, 69, 69, 0.35);
+    }
+
+    100% {
+        box-shadow:
+            0 0 15px rgba(255, 69, 69, 0.1);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .gauge-ring {
+        width: 135px;
+        height: 135px;
+    }
+
+    .gauge-ring::before {
+        width: 108px;
+        height: 108px;
+    }
+
+    .gauge-inner strong {
+        font-size: 32px;
+    }
+}

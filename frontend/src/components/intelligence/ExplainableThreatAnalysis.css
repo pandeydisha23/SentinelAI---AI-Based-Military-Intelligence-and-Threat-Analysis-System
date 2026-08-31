@@ -1,0 +1,506 @@
+.explainable-threat-analysis {
+    width: 100%;
+    min-width: 0;
+
+    padding: 20px;
+
+    border: 1px solid #1c382b;
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(14, 28, 22, 0.98),
+            rgba(8, 18, 14, 0.98)
+        );
+
+    color: #edf5ef;
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.02);
+
+    overflow: hidden;
+}
+
+
+.xai-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+
+
+.xai-heading {
+    min-width: 0;
+}
+
+
+.xai-kicker {
+    display: block;
+
+    color: #55ff91;
+
+    font-size: 8px;
+    font-weight: 800;
+
+    letter-spacing: 1.8px;
+
+    margin-bottom: 5px;
+}
+
+
+.xai-heading h2 {
+    margin: 0;
+
+    color: #edf5ef;
+
+    font-size: 17px;
+    font-weight: 800;
+}
+
+
+.xai-heading p {
+    margin: 6px 0 0;
+
+    color: #718d7d;
+
+    font-size: 9px;
+}
+
+
+.xai-model {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 7px 9px;
+
+    border: 1px solid #214232;
+    border-radius: 5px;
+
+    color: #55ff91;
+
+    font-size: 8px;
+    font-weight: 800;
+
+    letter-spacing: 0.7px;
+
+    white-space: nowrap;
+}
+
+
+.xai-prediction {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(150px, 0.5fr);
+
+    gap: 10px;
+
+    margin-bottom: 18px;
+}
+
+
+.xai-prediction > div {
+    padding: 14px;
+
+    border: 1px solid #1c382b;
+    border-radius: 7px;
+
+    background: rgba(255,255,255,0.025);
+}
+
+
+.xai-prediction span {
+    display: block;
+
+    color: #637e6e;
+
+    font-size: 7px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 7px;
+}
+
+
+.xai-prediction strong {
+    color: #edf5ef;
+
+    font-size: 20px;
+    font-weight: 900;
+}
+
+
+.xai-confidence strong {
+    color: #55b9ff;
+}
+
+
+.ml-low .xai-prediction > div:first-child strong {
+    color: #55ff91;
+}
+
+
+.ml-medium .xai-prediction > div:first-child strong {
+    color: #55b9ff;
+}
+
+
+.ml-high .xai-prediction > div:first-child strong {
+    color: #ffd54a;
+}
+
+
+.ml-critical .xai-prediction > div:first-child strong {
+    color: #ff5b5b;
+}
+
+
+.xai-section {
+    margin-bottom: 18px;
+}
+
+
+.xai-section-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+}
+
+
+.xai-section-header > div {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    color: #8ca697;
+
+    font-size: 8px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+.xai-section-header svg {
+    color: #55ff91;
+}
+
+
+.xai-section-header small {
+    color: #536e60;
+
+    font-size: 7px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+.xai-features {
+    display: flex;
+    flex-direction: column;
+
+    gap: 9px;
+}
+
+
+.xai-feature {
+    padding: 9px;
+
+    border: 1px solid #1a3326;
+    border-radius: 6px;
+
+    background: rgba(255,255,255,0.02);
+}
+
+
+.xai-feature-top {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-bottom: 7px;
+}
+
+
+.xai-feature-name {
+    color: #a8bcae;
+
+    font-size: 9px;
+    font-weight: 700;
+}
+
+
+.xai-feature-value {
+    color: #d9e5dd;
+
+    font-size: 8px;
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+
+.xai-impact-row {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+}
+
+
+.xai-impact-track {
+    flex: 1;
+
+    height: 6px;
+
+    background: #13251c;
+
+    border: 1px solid #203b2d;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+
+.xai-impact-fill {
+    height: 100%;
+
+    border-radius: inherit;
+
+    transition:
+        width 0.5s ease;
+}
+
+
+.impact-positive {
+    color: #ff7070;
+}
+
+
+.impact-negative {
+    color: #55ff91;
+}
+
+
+.impact-neutral {
+    color: #82988a;
+}
+
+
+.xai-impact-fill.impact-positive {
+    background: #ff5b5b;
+}
+
+
+.xai-impact-fill.impact-negative {
+    background: #55ff91;
+}
+
+
+.xai-impact-fill.impact-neutral {
+    background: #82988a;
+}
+
+
+.xai-impact-row strong {
+    min-width: 52px;
+
+    text-align: right;
+
+    font-size: 8px;
+}
+
+
+.xai-input-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 8px;
+}
+
+
+.xai-input {
+    min-width: 0;
+
+    padding: 9px;
+
+    border: 1px solid #1a3326;
+    border-radius: 6px;
+
+    background: rgba(255,255,255,0.02);
+}
+
+
+.xai-input span {
+    display: block;
+
+    color: #5f796a;
+
+    font-size: 7px;
+    font-weight: 700;
+
+    line-height: 1.3;
+
+    margin-bottom: 5px;
+}
+
+
+.xai-input strong {
+    display: block;
+
+    color: #d9e5dd;
+
+    font-size: 10px;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+}
+
+
+.xai-footer {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding-top: 11px;
+
+    border-top: 1px solid #183126;
+
+    color: #536e60;
+
+    font-size: 7px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.8px;
+}
+
+
+.xai-footer strong {
+    color: #8ca697;
+
+    max-width: 30%;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+}
+
+
+.xai-loading,
+.xai-error,
+.xai-empty,
+.xai-no-data {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    min-height: 100px;
+
+    color: #718d7d;
+
+    font-size: 9px;
+}
+
+
+.xai-error {
+    color: #ff7070;
+}
+
+
+.xai-empty svg,
+.xai-error svg {
+    font-size: 15px;
+}
+
+
+.xai-loader {
+    width: 15px;
+    height: 15px;
+
+    border: 2px solid #1d392a;
+    border-top-color: #55ff91;
+
+    border-radius: 50%;
+
+    animation:
+        xaiSpin 0.8s linear infinite;
+}
+
+
+@keyframes xaiSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .xai-prediction {
+        grid-template-columns: 1fr;
+    }
+
+
+    .xai-input-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+
+    .xai-header {
+        flex-direction: column;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .explainable-threat-analysis {
+        padding: 15px;
+    }
+
+
+    .xai-input-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .xai-footer {
+        flex-wrap: wrap;
+    }
+
+}

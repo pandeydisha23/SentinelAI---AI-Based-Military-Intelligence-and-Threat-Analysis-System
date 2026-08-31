@@ -1,0 +1,165 @@
+.threat-analytics {
+    width: 100%;
+    min-width: 0;
+    padding: 20px;
+    box-sizing: border-box;
+
+    border: 1px solid #1c382b;
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(14, 28, 22, 0.98),
+            rgba(8, 18, 14, 0.98)
+        );
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.02);
+}
+
+.threat-analytics-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 15px;
+
+    margin-bottom: 18px;
+}
+
+.analytics-kicker {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #55ff91;
+
+    font-size: 8px;
+    font-weight: 800;
+
+    letter-spacing: 1.7px;
+}
+
+.threat-analytics-header h2 {
+    margin: 0;
+
+    color: #edf5ef;
+
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.threat-analytics-header p {
+    margin: 5px 0 0;
+
+    color: #708b7b;
+
+    font-size: 9px;
+    line-height: 1.4;
+}
+
+.analytics-status {
+    flex-shrink: 0;
+
+    color: #55ff91;
+
+    font-size: 8px;
+    font-weight: 800;
+
+    letter-spacing: 0.8px;
+
+    white-space: nowrap;
+}
+
+.threat-analytics-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 10px;
+}
+
+.threat-analytics-card {
+    min-width: 0;
+
+    padding: 13px;
+
+    border: 1px solid #1b3327;
+    border-radius: 7px;
+
+    background:
+        rgba(255, 255, 255, 0.025);
+}
+
+.threat-analytics-card span {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #638071;
+
+    font-size: 7px;
+    font-weight: 800;
+
+    letter-spacing: 0.9px;
+}
+
+.threat-analytics-card strong {
+    display: block;
+
+    color: #edf5ef;
+
+    font-size: 22px;
+    font-weight: 900;
+
+    line-height: 1;
+}
+
+.threat-analytics-card small {
+    display: block;
+
+    margin-top: 6px;
+
+    color: #587163;
+
+    font-size: 7px;
+
+    line-height: 1.4;
+}
+
+.trend-up {
+    color: #ff5b5b !important;
+}
+
+.trend-down {
+    color: #55ff91 !important;
+}
+
+.trend-stable {
+    color: #55b9ff !important;
+}
+
+@media (max-width: 900px) {
+
+    .threat-analytics-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 500px) {
+
+    .threat-analytics {
+        padding: 15px;
+    }
+
+    .threat-analytics-header {
+        flex-direction: column;
+    }
+
+    .threat-analytics-grid {
+        grid-template-columns: 1fr;
+    }
+}

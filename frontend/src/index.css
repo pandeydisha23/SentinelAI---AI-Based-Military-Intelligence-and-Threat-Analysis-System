@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI,sans-serif;
+}
+
+body{
+
+    background:#0f1315;
+    font-family: "Allura";
+    overflow-x:hidden;
+}
