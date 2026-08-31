@@ -1,0 +1,2 @@
+# SentinelAI---AI-Based-Military-Intelligence-and-Threat-Analysis-System
+To develop SentinelAI, an AI-powered intelligence and threat analysis dashboard that detects objects from uploaded surveillance images, evaluates potential threat levels, generates AI-assisted mission reports, and provides explainable machine-learning predictions. The system integrates computer vision, machine learning, and real-time dashborad.

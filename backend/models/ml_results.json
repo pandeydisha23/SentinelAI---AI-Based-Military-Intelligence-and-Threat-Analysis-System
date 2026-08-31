@@ -1,0 +1,89 @@
+{
+    "available": true,
+    "model": "RandomForestClassifier",
+    "samples": 28,
+    "training_samples": 21,
+    "testing_samples": 7,
+    "classes": [
+        "HIGH",
+        "LOW",
+        "MEDIUM"
+    ],
+    "class_distribution": {
+        "HIGH": 15,
+        "LOW": 5,
+        "MEDIUM": 8
+    },
+    "metrics": {
+        "accuracy": 0.8571,
+        "precision": 0.8857,
+        "recall": 0.8571,
+        "f1_score": 0.8413
+    },
+    "confusion_matrix": [
+        [
+            4,
+            0,
+            0
+        ],
+        [
+            0,
+            1,
+            0
+        ],
+        [
+            1,
+            0,
+            1
+        ]
+    ],
+    "classification_report": {
+        "HIGH": {
+            "precision": 0.8,
+            "recall": 1.0,
+            "f1-score": 0.8888888888888888,
+            "support": 4.0
+        },
+        "LOW": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 1.0
+        },
+        "MEDIUM": {
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1-score": 0.6666666666666666,
+            "support": 2.0
+        },
+        "accuracy": 0.8571428571428571,
+        "macro avg": {
+            "precision": 0.9333333333333332,
+            "recall": 0.8333333333333334,
+            "f1-score": 0.8518518518518517,
+            "support": 7.0
+        },
+        "weighted avg": {
+            "precision": 0.8857142857142858,
+            "recall": 0.8571428571428571,
+            "f1-score": 0.8412698412698412,
+            "support": 7.0
+        }
+    },
+    "feature_importance": {
+        "threat_score": 0.305901,
+        "ai_confidence": 0.118277,
+        "object_count": 0.036315,
+        "average_detection_confidence": 0.155794,
+        "maximum_detection_confidence": 0.146408,
+        "priority_score": 0.237305
+    },
+    "features": [
+        "threat_score",
+        "ai_confidence",
+        "object_count",
+        "average_detection_confidence",
+        "maximum_detection_confidence",
+        "priority_score"
+    ]
+}
